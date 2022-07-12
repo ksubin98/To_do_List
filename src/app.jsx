@@ -1,8 +1,10 @@
 import React from 'react';
 import './app.css';
+import ToDoList from './components/toDoList';
+
 
 function App() {
-  return <h1>Hello :)</h1>
+  return <ToDoList/>; 
 }
 
 export default App;
