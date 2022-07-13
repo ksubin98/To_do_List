@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  state = {
-    time: 0,
-  }
-
+  
   handleIncrement = () => {
-    //this.state.count += 1 (X)
-    this.setState({time: this.state.time + 5})
+    this.props.onIncrement(this.props.lists); 
   }
   
-  handleDecrement = () => {
-    //this.state.count -= 1 (X)
-    const time = this.state.time - 5;
-    this.setState({time: time < 0 ? 0 : time })
+  handleDecrement = (lists) => {
+    this.props.onDecrement(this.props.lists); 
   }
+
+  handleCheckLine = (lists) => {
+    this.props.onCheckLine(this.props.lists); 
+  }
+
 
   render() {
     const {name, time} = this.props.lists;
@@ -28,7 +27,7 @@ class Todo extends Component {
       <button className="todo-btn-decre" onClick={this.handleDecrement}>
         <i className="fas fa-minus-square"></i>
       </button>
-      <button className="todo-btn-check">
+      <button className="todo-btn-check" onClick={this.handleCheckLine}>
         <input type="checkbox" />
       </button>
       </li>
