@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai';
+import {BsTrash} from 'react-icons/bs';
 
 class Todo extends Component {
+
   handleIncrement = () => {
     this.props.onIncrement(this.props.lists); 
   }
@@ -23,17 +26,17 @@ class Todo extends Component {
       <button 
         className="todo-btn-incre" 
         onClick={this.handleIncrement}>
-        <i className="fas fa-plus-square"></i>
+        <AiOutlinePlusCircle />
       </button>
       <button 
         className="todo-btn-decre" 
         onClick={this.handleDecrement}>
-        <i className="fas fa-minus-square"></i>
+       <AiOutlineMinusCircle />
       </button>
       <button 
         className="todo-btn-check" 
         onClick={this.handleCheckLine}>
-        <input type="checkbox" />
+          <BsTrash />
       </button>
       </li>
     );

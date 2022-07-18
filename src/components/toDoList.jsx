@@ -24,6 +24,10 @@ class ToDoList extends Component {
         ))
           }
       </ul>
+      <button 
+        className="resetBtn"
+        onClick={this.props.onReset}
+        >RESET</button>
       </>
     );
   }

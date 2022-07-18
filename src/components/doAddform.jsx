@@ -8,6 +8,7 @@ class DoAddform extends Component {
     event.preventDefault();
     const doName = this.inputRef.current.value;
     doName && this.props.onAdd(doName);
+    this.inputRef.current.value = '';
   };
 
   render() {

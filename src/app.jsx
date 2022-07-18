@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import DoAddform from './components/doAddform';
 import Navbar from './components/navbar';
 import ToDoList from './components/toDoList';
 
 class App extends Component {
   state = {
     list: [
-      { id:1, name: 'programming study', time: 0 },
-      { id:2, name: 'going to bank', time: 0 },
-      { id:3, name: 'meeting friends', time: 0 }
+      { id:1, name: 'programming study', time: 0, checked:false },
+      { id:2, name: 'going to bank', time: 0, checked:false },
+      { id:3, name: 'meeting friends', time: 0, checked:false }
     ],
   };
   handleIncrement = lists => {
@@ -27,13 +26,22 @@ class App extends Component {
     this.setState({list});
   }
 
-  handleCheckLine = (lists) => {
-    console.log(`handleCheckLine ${lists}`)
-  }
+  handleDelete = lists => {
+    const list = this.state.list.filter(item => item.id !== lists.id);
+    this.setState({ list });
+  };
 
   handleAdd = doName => {
     const list = [...this.state.list, {id: Date.now(), name: doName, time:0 }]
     this.setState({list});
+  }
+
+  handleReset = () => {
+    const list = this.state.list.map(lists => {
+      lists.time = 0;
+      return lists;
+    })
+    this.setState({list})
   }
 
   render() {
@@ -45,6 +53,7 @@ class App extends Component {
           onDecrement={this.handleDecrement}
           onCheckLine={this.handleCheckLine}
           onAdd={this.handleAdd}
+          onReset={this.handleReset}
         />
       </>
     );
