@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import DoAddform from './doAddform';
 import Todo from './todo';
 
 class ToDoList extends Component {
 
+  handleAdd = doName => {
+    this.props.onAdd(doName);
+  }
+
   render() {
     return (
-      <div className="list">
+      <>
+      <DoAddform onAdd={this.handleAdd}/>
       <ul>
         { this.props.list.map(lists => (
             <Todo 
@@ -18,7 +24,7 @@ class ToDoList extends Component {
         ))
           }
       </ul>
-      </div>
+      </>
     );
   }
 }

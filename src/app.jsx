@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DoAddform from './components/doAddform';
 import Navbar from './components/navbar';
 import ToDoList from './components/toDoList';
 
@@ -29,6 +30,12 @@ class App extends Component {
   handleCheckLine = (lists) => {
     console.log(`handleCheckLine ${lists}`)
   }
+
+  handleAdd = doName => {
+    const list = [...this.state.list, {id: Date.now(), name: doName, time:0 }]
+    this.setState({list});
+  }
+
   render() {
     return (
       <>
@@ -37,6 +44,7 @@ class App extends Component {
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onCheckLine={this.handleCheckLine}
+          onAdd={this.handleAdd}
         />
       </>
     );
