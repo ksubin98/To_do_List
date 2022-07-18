@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {MdOutlinePlaylistAddCheck} from "react-icons/md";
 
 class DoAddform extends Component {
 
@@ -19,7 +20,7 @@ class DoAddform extends Component {
           className="addInput"
           type="text"
           placeholder="Add To do"></input>
-        <button className="AddBtn">Add</button>
+        <button className="addBtn"><MdOutlinePlaylistAddCheck size="25"/></button>
       </form>
     );
   }

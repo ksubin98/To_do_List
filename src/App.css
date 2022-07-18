@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #f2eeac;
+  text-align: center;
+  align-items: center;
+  font-size: 2.5rem;
+  padding: 0.5em;
+}
+
+.logo {
+  color: #94c6f2;
+  margin-right: 0.5em;
+}
+
+.title {
+  color: #010b40;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.count {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #94c6f2;
+  color: #f2eeac;
+  border-radius: 50%;
+}
+
+.addForm {
+  background-color: white;
+  align-items: center;
+  text-align: center;
+}
+
+.addInput {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.addBtn {
+  display: inline-block;
+  background-color: #f2eeac;
+  color: #94c6f2;
+  border-radius: 20%;
+}
+
+div {
+  background-color: #f2f2f2;
+  align-items: center;
+  text-align: center;
+}
+
+.todo {
+  list-style: none;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5em;
+  color: #010326;
+}
+
+.todo-name {
+  margin-right: 0.3em;
+  margin-left: -3em;
+}
+
+.todo-time {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  width: 2.5rem;
+  height: 2rem;
+  line-height: 2em;
+  border-radius: 50%;
+  background-color: #94c6f2;
+}
+
+.todo-btn-incre,
+.todo-btn-decre {
+  color: #4a808c;
+}
+
+.todo-btn-de {
+  color: #f24949;
+}
+
+.resetBtn {
+  font-size: 1.5rem;
+  margin-top: 2em;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #4a808c;
+  color: #f2e9eb;
+  border-radius: 0.2em;
+}

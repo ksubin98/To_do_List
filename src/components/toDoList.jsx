@@ -10,7 +10,7 @@ class ToDoList extends Component {
 
   render() {
     return (
-      <>
+      <div className="todos">
       <DoAddform onAdd={this.handleAdd}/>
       <ul>
         { this.props.list.map(lists => (
@@ -28,7 +28,7 @@ class ToDoList extends Component {
         className="resetBtn"
         onClick={this.props.onReset}
         >RESET</button>
-      </>
+      </div>
     );
   }
 }

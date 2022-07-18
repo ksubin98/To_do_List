@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import './app.css';
 import Navbar from './components/navbar';
 import ToDoList from './components/toDoList';
 
 class App extends Component {
   state = {
     list: [
-      { id:1, name: 'programming study', time: 0, checked:false },
-      { id:2, name: 'going to bank', time: 0, checked:false },
-      { id:3, name: 'meeting friends', time: 0, checked:false }
+      { id:1, name: 'Javascript 공부', time: 20, checked:false },
+      { id:2, name: 'react 블로그', time: 15, checked:false },
     ],
   };
   handleIncrement = lists => {
@@ -51,7 +51,7 @@ class App extends Component {
         <ToDoList list={this.state.list}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
-          onCheckLine={this.handleCheckLine}
+          onCheckLine={this.handleDelete}
           onAdd={this.handleAdd}
           onReset={this.handleReset}
         />

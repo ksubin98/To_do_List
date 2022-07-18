@@ -20,25 +20,27 @@ class Todo extends Component {
   render() {
     const {name, time} = this.props.lists;
     return (
+      <div>
       <li className="todo">
       <span className="todo-name">{name}</span>
-      <span className="todo-time">{time}</span>
+      <span className="todo-time">{time}m</span>
       <button 
         className="todo-btn-incre" 
         onClick={this.handleIncrement}>
-        <AiOutlinePlusCircle />
+        <AiOutlinePlusCircle size="18"/>
       </button>
       <button 
         className="todo-btn-decre" 
         onClick={this.handleDecrement}>
-       <AiOutlineMinusCircle />
+       <AiOutlineMinusCircle size="18"/>
       </button>
       <button 
-        className="todo-btn-check" 
+        className="todo-btn-de" 
         onClick={this.handleCheckLine}>
-          <BsTrash />
+          <BsTrash size="18"/>
       </button>
       </li>
+      </div>
     );
   }
 }
