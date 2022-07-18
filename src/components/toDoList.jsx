@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DoAddform from './doAddform';
+import Help from './help';
 import Todo from './todo';
 
 class ToDoList extends Component {
@@ -28,6 +29,7 @@ class ToDoList extends Component {
         className="resetBtn"
         onClick={this.props.onReset}
         >RESET</button>
+        <Help />
       </div>
     );
   }
