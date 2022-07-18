@@ -2,33 +2,23 @@ import React, { Component } from 'react';
 import Todo from './todo';
 
 class ToDoList extends Component {
-  
-  handleIncrement = () => {
-    this.props.onIncrement(this.props.lists); 
-  }
-  
-  handleDecrement = (lists) => {
-    this.props.onDecrement(this.props.lists); 
-  }
-
-  handleCheckLine = (lists) => {
-    this.props.onCheckLine(this.props.lists); 
-  }
 
   render() {
     return (
+      <div className="list">
       <ul>
         { this.props.list.map(lists => (
             <Todo 
               key={lists.id} 
               lists={lists}
-              onIncrement={this.handleIncrement}
-              onDecrement={this.handleDecrement}
-              onCheckLine={this.handleCheckLine}
+              onIncrement={this.props.onIncrement}
+              onDecrement={this.props.onDecrement}
+              onCheckLine={this.props.onCheckLine}
             />
         ))
           }
       </ul>
+      </div>
     );
   }
 }

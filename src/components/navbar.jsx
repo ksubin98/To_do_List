@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import {AiFillEdit} from 'react-icons/ai';
 
 class Navbar extends Component {
 
   render() {
     return (
-      <div className="navbar">
-        <div className="logo">
-        <i className="fa-solid fa-clipboard-list"></i>
-        </div>
-        <span className="title">To Do List</span>
-        <span className="time-count">time</span>
-      </div>
+      <nav className="navbar">
+        <AiFillEdit className="logo"/>
+        <span className="title">To Do List </span>
+        <span className="count">{this.props.totalCount}</span>
+      </nav>
     );
   }
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './components/navbar';
 import ToDoList from './components/toDoList';
 
-
 class App extends Component {
   state = {
     list: [
@@ -19,7 +18,7 @@ class App extends Component {
 
   }
   
-  handleDecrement = (lists) => {
+  handleDecrement = lists => {
     const list = [...this.state.list];
     const index = list.indexOf(lists);
     const time = list[index].time - 5;
@@ -33,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar />
+        <Navbar totalCount={this.state.list.filter( item => item.time > 0).length} />
         <ToDoList list={this.state.list}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}

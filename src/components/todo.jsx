@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  
   handleIncrement = () => {
     this.props.onIncrement(this.props.lists); 
   }
   
-  handleDecrement = (lists) => {
+  handleDecrement = () => {
     this.props.onDecrement(this.props.lists); 
   }
 
-  handleCheckLine = (lists) => {
+  handleCheckLine = () => {
     this.props.onCheckLine(this.props.lists); 
   }
 
@@ -21,13 +20,19 @@ class Todo extends Component {
       <li className="todo">
       <span className="todo-name">{name}</span>
       <span className="todo-time">{time}</span>
-      <button className="todo-btn-incre" onClick={this.handleIncrement}>
+      <button 
+        className="todo-btn-incre" 
+        onClick={this.handleIncrement}>
         <i className="fas fa-plus-square"></i>
       </button>
-      <button className="todo-btn-decre" onClick={this.handleDecrement}>
+      <button 
+        className="todo-btn-decre" 
+        onClick={this.handleDecrement}>
         <i className="fas fa-minus-square"></i>
       </button>
-      <button className="todo-btn-check" onClick={this.handleCheckLine}>
+      <button 
+        className="todo-btn-check" 
+        onClick={this.handleCheckLine}>
         <input type="checkbox" />
       </button>
       </li>
